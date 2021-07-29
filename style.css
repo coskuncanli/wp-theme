@@ -1,0 +1,805 @@
+/*
+Theme Name: Coskun Canli - The Theme 1.1
+Theme URI: 
+Author: Coskun Canli
+Author URI: https://coskuncanli.com
+Description: 
+Version: 1.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: coskuncanli
+Tags: grid, dark, personal
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Lato|Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,400&display=swap');
+
+
+:root {
+    font-size: 16px;
+    --r1: #16141a;
+    --r2: #a200ff;
+    --base: #ffffff;
+    --box: rgba(32, 28, 41, .5);
+}
+
+::selection {
+    background-color: var(--r2);
+    color: var(--base);
+}
+
+::placeholder {
+    color: #999;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: #999;
+}
+
+::-ms-input-placeholder {
+    color: #999;
+}
+
+* {
+    font-family: Rubik, Lato, sans-serif;
+}
+
+body {
+    padding: 0 1em;
+    background-color: var(--r1);
+    color: var(--base);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.t-right{
+	float: right;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 1em;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--box);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 1em;
+    width: 1em;
+    height: 1em;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--r2);
+    cursor: ns-resize;
+}
+
+#btn-up {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: var(--r2);
+    color: #ffffff;
+    display: block;
+    text-align: center;
+    border-radius: 20px;
+    position: fixed;
+    bottom: 3em;
+    right: 2em;
+    visibility: hidden;
+    transition: all .5s ease-out;
+}
+
+#btn-up:hover {
+    filter: grayscale();
+}
+
+#btn-menu {
+    display: none;
+    color: #fff!important;
+    position: absolute;
+    top: -1em;
+    right: 0;
+    font-size: 2em;
+    cursor: pointer;
+    outline: none;
+}
+
+.site-title {
+    grid-column: 2 / 5;
+}
+
+.site-title a {
+    font-family: Raleway, Lato, sans-serif;
+    color: var(--base);
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.banner-container {
+    display: flex;
+    grid-column: 2 / 10;
+}
+
+.sm-container {
+    grid-column: 10/ 12;
+    text-align: right;
+    position: relative;
+    z-index: 5;
+}
+
+.sm-container a,
+.sm-container span {
+    font-size: 1.2em;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: .4em;
+}
+
+.sm-container .search-btn {
+    background-color: var(--box);
+    line-height: 2em;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background-color: var(--r2);
+}
+
+.masterheader {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    height: 80px;
+    line-height: 80px;
+    position: relative;
+    z-index: 3;
+}
+
+.masterheader * {
+    margin: 0;
+    transition: all .4s ease;
+}
+
+.mainnav {
+    grid-column: 6 / 12;
+}
+
+.mainnav .menu {
+    list-style-type: none;
+}
+
+.mainnav .menu li {
+    display: inline-block;
+}
+
+.mainnav .menu li a {
+    margin: 0 1em;
+    text-decoration: none;
+    color: var(--base);
+    transition: all .4s ease-out;
+    font-family: Raleway, Lato, sans-serif;
+    font-weight: 900;
+    font-size: .8em;
+}
+
+.mainnav .menu li a:hover {
+    color: var(--r2);
+}
+
+.main {
+    min-height: calc(60vh + 80px);
+}
+
+.main a {
+    color: yellow;
+}
+
+.main-loop {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding-top: 3em;
+}
+
+.main-loop-list {
+    grid-column: 4 / 10;
+    padding: 0;
+    list-style-type: none;
+}
+
+.main-loop-meta {
+    font-size: .6em;
+    color: #bbb;
+}
+
+.post-categories {
+    list-style: none;
+    padding: 0;
+    display: inline;
+}
+
+.post-categories li {
+    display: inline;
+
+}
+
+.main-loop-item h2 {
+    margin-bottom: 0;
+}
+
+.main-loop-item a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.main-loop-item a:hover {
+    color: #aaa;
+}
+
+.search-results ul li div:first-child {
+    background-color: var(--box);
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 6px;
+}
+
+.post, .page {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    line-height: 1.4em;
+}
+
+.post-header {
+    grid-column: 2 / 12;
+    padding: 2em 0;
+}
+
+.post-title {
+    font-size: calc(1em + 2.8vw);
+    line-height: calc(1em);
+}
+
+.post-meta span {
+    background-color: var(--r2);
+    padding: .4em;
+    border-radius: 6px;
+    font-size: .8em;
+    margin-right: .4em;
+}
+
+.post-content {
+    grid-column: 2 / 10;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.post-content * {
+    grid-column: 2/8;
+}
+
+.post p:first-child {
+    grid-column: 1 / 8;
+    background-color: var(--box);
+    padding: 1em;
+    border-radius: 6px;
+}
+
+.post-content figure, .page-content figure {
+    margin: 1em 0;
+}
+
+.post-content figure img, .page-content figure img {
+    max-width: 100%;
+	height: auto;
+}
+
+.post-share {
+    padding-top: 2em;
+    grid-column: 2 /10;
+}
+
+.post-share span {
+    background-color: var(--box);
+
+    padding: .4em;
+    border-radius: 6px;
+    font-size: .8em;
+}
+
+.post-share span a,
+.post-meta span a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.post-nav {
+    margin: 2em 0;
+    padding: 2em 0;
+    border-top: 1px solid #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-nav-link a {
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+}
+.post-nav-link:first-child::before {
+    content: "Önceki Yazı";
+    color: var(--r2);
+    text-align: center;
+    display: block;
+}
+
+.post-nav-link:last-child::before {
+    content: "Sonraki Yazı";
+    color: var(--r2);
+    text-align: center;
+    display: block;
+}
+
+.page-content{
+    grid-column: 4 / 10;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); 
+}
+.page-content * {
+    grid-column: 1/10;
+    display: grid;
+}
+
+.page-header{
+    grid-column: 2 / 12;
+    padding: 2em 0;
+}
+
+.page-title{
+    font-size: calc(1em + 1.8vw);
+    line-height: calc(1em);
+    text-align: center;
+}
+
+.mainfooter {
+    padding: 2em 0;
+    margin: 3em -1em 0 -1em;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.footer-widgets {
+    grid-column: 2 / 10;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-widgets ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.footer-widgets ul li {
+    line-height: 2em;
+}
+
+.footer-widgets ul li a i {
+    display: inline-block;
+    margin-right: 1em;
+    width: 1em;
+    text-align: center;
+}
+
+.footer-widgets ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: .8em;
+}
+
+.footer-widgets ul li a:hover {
+    font-weight: bold;
+}
+
+
+a.tag-cloud-link{
+	text-decoration:none;
+	color: #fff;
+}
+a.tag-cloud-link:hover{
+	opacity:.7;
+}
+
+.copyright {
+    grid-column: 2 / 12;
+    height: 40px;
+    font-size: .8em;
+    line-height: 40px;
+    display: grid;
+    margin: 0 -1em;
+    grid-template-columns: repeat(12, 1fr);
+    background-color: var(--box);
+}
+
+.copyright-inner {
+    grid-column: 2 / 12;
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright-inner a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.copyright-inner a:hover {
+    font-weight: bold;
+}
+
+#search-box{
+    position: relative;
+    display: none;
+    top: -20px;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+}
+.search-box{
+    
+}
+#search-box input[type=search], .search-box input[type=search] {
+    background-color: #fff;
+    position: relative;
+    z-index: 9;
+    color: var(--r1);
+    border: none;
+    padding: .8em;
+    outline: none;
+    height: 1.4em;
+    line-height: 1.4em;
+    border-radius: .7em;
+}
+
+.template-title {
+    grid-column: 2 / 10;
+    text-align: right;
+    font-size: 1.2em;
+}
+
+.noresult {
+    grid-column: 4 / 10;
+    text-align: center;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 55;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #16141a;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.sidenav ul{
+    list-style-type: none;
+    padding: 1em;
+}
+.sidenav ul li a, .closebtn  {
+    padding: 8px 8px 8px 12px;
+    text-decoration: none;
+    /*font-size: calc(1em + 2.8vw);*/
+    line-height: 2em;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.sm-container-responsive{
+    padding: 1em;
+    text-align: center;
+}
+.sm-container-responsive a{
+    color: #fff;
+    font-size: 1.2em!important;
+    line-height: 2em;
+    display: inline-block;
+    margin: 1em;
+}
+.table-caption{
+    background-color: inherit;
+    color: var(--base);
+    text-align: left;
+    padding: 0em;
+    font-weight: bold;
+}
+.properity-table{
+   
+    width: 100%;
+    font-size: .8em;
+    background-color: inherit;
+    color: var(--base);
+}
+.properity-table tr td{
+    padding: 0em;
+}
+.properity-table tr td:first-child{
+    width: 20%;
+    font-weight: bold;
+}
+.border-table{
+	border: 1px solid #fff;
+}
+.border-table td{
+	vertical-align: text-top;
+}
+.border-table td, .border-table th{
+	padding: .6em;
+}
+.border-table th{
+	border-bottom: 1px solid #fff;
+}
+.sample-table th{
+	text-align: left;
+}
+.wp-block-button a{
+    padding: .5em;
+    background-color: var(--r2);
+    color: var(--base);
+    margin: .4em;
+    border-radius: 6px;
+    display: inline-block;
+    text-decoration: none;
+}
+.wp-block-button a:hover{
+    opacity: .7;
+}
+/* Page Navi Styles */
+.wp-pagenavi{
+	margin-top: 3em;
+}
+.wp-pagenavi span, .wp-pagenavi a{
+	display: inline-block;
+	width:1.4em;
+	height:1.4em;
+	line-height:1.4em;
+	border-radius: .7em;
+	margin-right: 1em;
+	text-align:center;
+	border: 1px solid #fff;
+	text-decoration:none;
+	color: #fff;
+}
+.wp-pagenavi span{
+	background-color: #fff;
+	color: var(--r1)!important;
+}
+/* Form Styles */
+.wpcf7{
+	width: 60%;
+	margin: auto;
+}
+.wpcf7 p{
+	margin: 0 0 1em 0;
+	display: block;
+}
+.wpcf7 p label{
+	grid-column: 3/5!important;
+}
+/* helpers */
+.has-text-align-center{
+	text-align:center!important;
+}
+
+/* Media Querries */
+@media only screen and (max-width: 768px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+    .sm-container{
+        display: none;
+    }
+
+    .banner-container {
+        margin: -1em;
+    }
+
+    .masterheader {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        margin-top: 2em;
+    }
+
+    .main {
+        margin-top: 0;
+    }
+
+    .site-title {
+        text-align: center;
+        width: 100%;
+    }
+
+    .mainnav {
+        display: none;
+    }
+
+    .post,
+    .post-content,
+    .page-content,
+    .footer-widgets,
+    .main-loop {
+        position: relative;
+        display: block;
+    }
+
+    .page-content{
+        grid-column: 2 / 12;
+    }
+    .page-content * {
+        width: 100%;
+    }
+    
+    .sm-container {
+        text-align: center;
+    }
+
+    .post-header {
+        margin-top: 3em !important;
+    }
+
+    .post-header .post-nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .post-nav-link {
+        display: block;
+        text-align: center;
+        margin-bottom: 2em;
+    }
+
+    .post-nav-link .fas {
+        display: none;
+    }
+
+    .post-nav-link:first-child::before {
+        content: "Önceki Yazı";
+        color: var(--r2);
+        text-align: center;
+        display: block;
+    }
+
+    .post-nav-link:last-child::before {
+        content: "Sonraki Yazı";
+        color: var(--r2);
+        text-align: center;
+        display: block;
+    }
+
+    .footer-widget-container {
+        margin-bottom: 2em;
+    }
+
+    .copyright {
+        height: auto;
+        text-align: center;
+    }
+
+    .copyright-inner {
+        flex-direction: column;
+    }
+
+    #btn-up {
+        display: none;
+    }
+
+    #btn-menu {
+        display: block;
+    }
+
+    #search-box {
+        top: -30px;
+    }
+
+    .template-title {
+        text-align: center;
+    }
+}
+
+
+@media print {
+    * {
+        background-color: #fff!important;
+        color: #000!important;
+    }
+	iframe,
+	#thread__container,
+	#thread__wrapper,
+	#layout,
+    #masterheader,
+    .mainfooter,
+    .copyright,
+    .post-meta,
+    .post-share,
+    .post-nav,
+    #btn-up{
+        display: none !important;
+    }
+
+    .masterheader,
+    .post,
+    .post-content,
+    .page-content,
+    .footer-widgets,
+    .main-loop {
+        display: block;
+    }
+
+    a:after {
+        content: " ("attr(href) ")";
+    }
+    #btn-up:after{
+        content: none!important;
+    }
+
+    main::after {
+        content: "Copyright coskuncanli.com";
+        display: block;
+        text-align: left;
+        font-weight: bold;
+        margin-top: 4em;
+    }
+
+    img {
+        filter: grayscale();
+    }
+    pre {
+        border: 1px solid #000;
+        padding: .5cm;
+		page-break-inside: avoid;
+    }
+    pre code .token{
+        color: #000!important;
+    }
+
+    .post p:first-child {
+        border: 1px solid #000;
+        padding: .5cm;
+    }
+
+	
+    @page {
+		size: A4;
+        margin: 2cm;
+    }
+}
